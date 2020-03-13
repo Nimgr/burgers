@@ -462,12 +462,13 @@ img {
 .section__title {
   font-size: 72px;
   color: #f9b43b;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   font-family: "Gagalin";
   line-height: 1;
 }
 .section__title--centered {
   text-align: center;
+  margin-bottom: 60px;
 }
 .section__title--color--black {
   color: #000;
@@ -606,6 +607,12 @@ img {
 
 .feature__title {
   font-size: 24px;
+  font-family: "Lifehack";
+}
+
+.feature__text {
+  font-family: "Ubuntu";
+  color: #777675;
 }
 
 .reviews {
