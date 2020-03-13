@@ -39,6 +39,8 @@
 
 .review__hover {
     position: absolute;
+    font-family: "Ubuntu";
+    font-size: 14px;
     color: white;
     top: 0;
     left: 0;
@@ -54,6 +56,8 @@
 }
 
 .review__username {
+    font-family: "Ubuntu";
+    font-size: 14px;
     margin-bottom: 20px;
 }
 
@@ -66,6 +70,8 @@
 }
 
 .review__btn {
+    font-family: "Ubuntu";
+    font-size: 14px;
     color: white;
     display: inline-flex;
     align-self: flex-start;
