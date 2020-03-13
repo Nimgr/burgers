@@ -614,6 +614,18 @@ img {
   color: #777675;
 }
 
+.team-accordeon {
+  background: url(../img/team-bg.png) center center/cover no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
+.menu-accordeon {
+  background: url(../img/menu-bg.png) center center/cover no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
 .reviews {
   background: black;
   height: 100vh;
@@ -742,6 +754,106 @@ img {
   padding: 8px 21px;
   border: none;
   border-radius: 4px;
+}
+
+.map {
+  background: url(../img/map.png) center center/cover no-repeat;
+  color: #ffffff;
+  position: relative;
+}
+
+.contacts {
+  width: 100%;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #070707;
+}
+
+.address {
+  width: 50%;
+}
+
+.address-office__location {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+}
+
+.address__phone {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Ubuntu";
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  color: #e45028;
+}
+
+.socials {
+  width: 50%;
+}
+
+.socials__list {
+  display: flex;
+  padding-top: 9px;
+  padding-left: 0;
+}
+
+.socials__item {
+  padding-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d3d3d7;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials__link::before {
+  content: "";
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials__link:hover {
+  background-color: #b03664;
+}
+
+.socials__link_icon_vk::before {
+  background-image: url("../icons/vk.svg");
+  width: 12px;
+  height: 7px;
+}
+
+.socials__link_icon_fb::before {
+  background-image: url("../icons/fb.svg");
+  width: 6px;
+  height: 13px;
+}
+
+.socials__link_icon_tw::before {
+  background-image: url("../icons/twitter.svg");
+  width: 11px;
+  height: 9px;
+}
+
+.socials__link_icon_inst::before {
+  background-image: url("../icons/inst.svg");
+  width: 12px;
+  height: 9px;
 }
 
 /*# sourceMappingURL=main.css.map */
