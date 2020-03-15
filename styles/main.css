@@ -1209,6 +1209,12 @@ img {
   }
 }
 
+.footer__phone-icon {
+  width: 0.8125rem;
+  height: 0.8125rem;
+  margin-right: 8px;
+}
+
 .socials {
   position: relative;
   top: 50%;
