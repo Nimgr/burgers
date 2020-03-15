@@ -21,7 +21,13 @@
 
 			&:before {
 				transform: rotate(-180deg);
+				transition: 1s;
 			}
+		}
+		.team-accordeon__content {
+			@extend %clearfix;
+			padding-top: rem(14px);
+			height: initial;
 		}
 	}
 }
@@ -51,7 +57,7 @@
 		border-right: rem(5px) solid transparent;
 		border-bottom: rem(0px) solid transparent;
 		transform: rotate(0deg);
-		transition: .3s;
+		transition: 1s;
 	}
 
 	&:after {
@@ -75,7 +81,8 @@
 .team-accordeon__content {
 	@extend %clearfix;
 	padding-top: rem(14px);
-	display: none;
+	height: 0;
+	overflow: hidden;
 
 	@include tablets {
 		padding: 0 25%;
@@ -101,7 +108,7 @@
 }
 
 .team-accordeon__text {
-	width: 70%;
+	max-width: 60%;
 }
 
 .team-accordeon__pic, .team-accordeon__text {
