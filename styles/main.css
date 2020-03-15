@@ -337,11 +337,11 @@ template {
   display: none;
 }
 
-.order__form:before, .menu-accordeon:before, .order__form:after, .menu-accordeon:after {
+.order__form:before, .menu-accordeon:before, .team-accordeon__content:before, .order__form:after, .menu-accordeon:after, .team-accordeon__content:after {
   content: "";
   display: table;
 }
-.order__form:after, .menu-accordeon:after {
+.order__form:after, .menu-accordeon:after, .team-accordeon__content:after {
   clear: both;
 }
 
@@ -641,12 +641,19 @@ img {
   padding: 5% 2% 0 7%;
 }
 
-.team-accordeon {
-  padding-bottom: 1.25rem;
+@media screen and (max-width: 768px) {
+  .team-accordeon {
+    padding-bottom: 1.25rem;
+  }
 }
 
 .team-accordeon__item {
   margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .team-accordeon__item {
+    margin-bottom: 1.875rem;
+  }
 }
 .team-accordeon__item:last-child {
   margin-bottom: 0;
@@ -722,8 +729,13 @@ img {
 }
 
 .team-accordeon__img {
+  display: inline-block;
+  vertical-align: top;
   width: 6.25rem;
   height: 6.25rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   display: inline-block;
 }
@@ -1133,6 +1145,7 @@ img {
 }
 
 .yandex-map {
+  background: url("../img/map.png") center center/cover no-repeat;
   position: absolute;
   top: 0;
   bottom: 0;

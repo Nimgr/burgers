@@ -1,15 +1,15 @@
 .team-accordeon {
-	// @include tablets {
+	@include tablets {
 		padding-bottom: rem(20px);
-	// }
+	}
 }
 
 .team-accordeon__item {
   margin-bottom: rem(40px);
   
-//   @include tablets {
-//     margin-bottom: rem(30px);
-//   }
+  @include tablets {
+    margin-bottom: rem(30px);
+  }
 
 	&:last-child {
 		margin-bottom: 0;
@@ -73,7 +73,7 @@
 }
 
 .team-accordeon__content {
-	// @extend %clearfix;
+	@extend %clearfix;
 	padding-top: rem(14px);
 	display: none;
 
@@ -92,10 +92,10 @@
 }
 
 .team-accordeon__img {
-	// @include inlineblock();
+	@include inlineblock();
 	width: rem(100px);
 	height: rem(100px);
-	// @include cover;
+	@include cover;
     border-radius: 50%;
     display: inline-block;
 }
