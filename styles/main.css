@@ -1104,8 +1104,10 @@ img {
 .order__radio-title {
   display: inline-block;
   vertical-align: middle;
-  font-size: 0.875rem;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
   color: #fff;
+  font-size: 0.875rem;
   margin-left: 0.625rem;
 }
 
@@ -1188,6 +1190,8 @@ img {
 
 .footer__address {
   color: #ffffff;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
   font-size: 0.875rem;
 }
 

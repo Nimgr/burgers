@@ -140,8 +140,9 @@
   
   .order__radio-title {
     @include inlineblock(middle);
-    font-size: rem(14px);
+    @include ubuntu();
     color: #fff;
+    font-size: rem(14px);
     margin-left: rem(10px);
   }
   
