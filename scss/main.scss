@@ -4,8 +4,18 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+// resolutions
+
+$phones: 480px;
+$tablets: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
 //normalize
 @import './settings/normalize';
+
+// media
+@import "./components/media";
 
 //setups
 @import './settings/vars';
@@ -16,17 +26,20 @@ $red: #e35028;
 //components
 @import './components/section';
 @import './components/header';
-@import './components/menu';
+@import './components/nav';
 @import './components/hero';
 @import './components/btn';
 @import './components/arrow-down';
 @import './components/features';
 @import './components/feature';
+@import './components/team';
 @import './components/team-accordeon';
+@import './components/media';
+@import './components/menu';
 @import './components/menu-accordeon';
 @import './components/reviews';
 @import './components/review';
 @import './components/order';
 @import './components/map';
-@import './components/contacts';
+@import './components/footer';
 @import './components/socials';

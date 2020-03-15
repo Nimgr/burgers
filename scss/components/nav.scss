@@ -1,0 +1,36 @@
+$itemsMargin: 16px;
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        &:before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: currentColor;
+            margin-left: $itemsMargin;
+        }
+
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+
+}
+
+.nav__link {
+    margin-left: $itemsMargin;
+    text-decoration: none;
+    font-family: "Ubuntu";
+    text-transform: uppercase;
+    font-size: 10px;
+}
