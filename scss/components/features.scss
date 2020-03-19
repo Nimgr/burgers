@@ -1,5 +1,7 @@
 .features {
     background: url('../img/features-bg.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
 }
 
 .features__list {

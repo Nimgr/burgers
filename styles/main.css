@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic");
 html {
   line-height: 1.15;
   /* 1 */
@@ -357,24 +358,6 @@ template {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-B.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
 html, body {
   height: 100%;
   margin: 0;
@@ -387,13 +370,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
   color: #000;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   overflow: hidden;
 }
@@ -457,6 +441,9 @@ img {
   display: flex;
   overflow: hidden;
 }
+.section--align--top {
+  justify-content: flex-start;
+}
 @media screen and (max-width: 768px) {
   .section {
     min-height: initial;
@@ -468,7 +455,6 @@ img {
   color: #f9b43b;
   font-family: "Gagalin-Regular", Helvetica, sans-serif;
   margin-bottom: 0.75rem;
-  font-family: "Gagalin";
   line-height: 1;
 }
 .section__title--centered {
@@ -483,14 +469,25 @@ img {
 }
 
 .section__desc {
-  font-size: 50px;
-  font-family: "Lifehack";
+  font-size: 65px;
+  font-family: "Lifehack-Medium";
+  line-height: 1;
+  margin-top: 56px;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 13px;
 }
 
 .header__btns {
@@ -507,7 +504,6 @@ img {
 .nav__item {
   display: flex;
   align-items: center;
-  margin-right: 15px;
 }
 .nav__item:before {
   content: "";
@@ -516,22 +512,22 @@ img {
   height: 4px;
   border-radius: 50%;
   background: currentColor;
-  margin-left: 16px;
+  margin: 0 15px;
 }
 .nav__item:first-child:before {
   display: none;
 }
 
 .nav__link {
-  margin-left: 16px;
   text-decoration: none;
   font-family: "Ubuntu";
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .hero {
-  background: url(../img/hero-bg.png) center center/cover no-repeat;
+  background: url(../img/texture.png) center center/cover no-repeat;
   color: #ffffff;
   position: relative;
 }
@@ -592,6 +588,8 @@ img {
 
 .features {
   background: url("../img/features-bg.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
 }
 
 .features__list {
@@ -614,12 +612,13 @@ img {
 
 .feature__title {
   font-size: 24px;
-  font-family: "Lifehack";
+  font-family: "Lifehack-Medium";
 }
 
 .feature__text {
   font-family: "Ubuntu";
   color: #777675;
+  font-size: 14px;
 }
 
 .team {
@@ -677,11 +676,11 @@ img {
 }
 
 .team-accordeon__item {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.625rem;
 }
 @media screen and (max-width: 768px) {
   .team-accordeon__item {
-    margin-bottom: 1.875rem;
+    margin-bottom: 0.625rem;
   }
 }
 .team-accordeon__item:last-child {
@@ -695,7 +694,7 @@ img {
   transition: 1s;
 }
 .team-accordeon__item.active .team-accordeon__content {
-  padding-top: 0.875rem;
+  display: flex;
   height: initial;
 }
 
@@ -706,7 +705,6 @@ img {
   text-decoration: none;
   position: relative;
   display: block;
-  margin-bottom: 1.25rem;
 }
 .team-accordeon__trigger:before, .team-accordeon__trigger:after {
   content: "";
@@ -743,9 +741,11 @@ img {
 }
 
 .team-accordeon__content {
-  padding-top: 0.875rem;
+  display: flex;
   height: 0;
   overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
   .team-accordeon__content {
@@ -776,23 +776,25 @@ img {
 }
 
 .team-accordeon__text {
-  max-width: 60%;
+  max-width: 230px;
+  margin-left: 20px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  opacity: 0.7;
 }
 
-.team-accordeon__pic, .team-accordeon__text {
-  float: left;
-}
 @media screen and (max-width: 768px) {
   .team-accordeon__pic, .team-accordeon__text {
-    float: none;
     width: 100%;
   }
 }
 
 .team-accordeon__title {
   font-family: "Ubuntu", Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 0.875rem;
+  font-weight: 700;
   color: #fff;
   margin-bottom: 0.875rem;
 }
@@ -802,6 +804,7 @@ img {
   font-weight: 300;
   color: #fff;
   font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .menu {
@@ -817,6 +820,7 @@ img {
 }
 
 .menu-accordeon {
+  display: flex;
   position: absolute;
   right: 0;
   top: 0;
@@ -824,7 +828,7 @@ img {
 }
 
 .menu-accordeon__item {
-  float: left;
+  display: flex;
   height: 100%;
 }
 .menu-accordeon__item.active .menu-accordeon__trigger-text {
@@ -832,9 +836,10 @@ img {
 }
 .menu-accordeon__item.active .menu-accordeon__content {
   height: 100%;
-  float: left;
+  display: flex;
   background: rgba(47, 50, 52, 0.93);
   width: 100%;
+  max-width: 540px;
 }
 .menu-accordeon__item.active .menu-accordeon__text {
   font-family: "Ubuntu", Helvetica, sans-serif;
@@ -842,7 +847,6 @@ img {
   font-size: 0.875rem;
   color: #fff;
   padding: 3.75rem 1.875rem;
-  width: 100%;
   line-height: 1.8;
 }
 
@@ -850,7 +854,6 @@ img {
   width: 5rem;
   display: block;
   height: 100%;
-  float: left;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -861,6 +864,10 @@ img {
   .menu-accordeon__trigger {
     width: 3.125rem;
   }
+}
+
+.menu-accordeon__trigger-right {
+  background-position: right;
 }
 
 .menu-accordeon__trigger-text {
@@ -884,7 +891,6 @@ img {
 
 .menu-accordeon__content {
   height: 100%;
-  float: left;
   background: rgba(47, 50, 52, 0.93);
   width: 0;
   overflow: hidden;
@@ -896,9 +902,7 @@ img {
   font-size: 0.875rem;
   color: #fff;
   padding: 3.75rem 1.875rem;
-  width: 100%;
   line-height: 1.8;
-  display: none;
 }
 @media screen and (max-width: 480px) {
   .menu-accordeon__text {
@@ -928,7 +932,7 @@ img {
   color: #fff;
 }
 .review:hover .review__hover {
-  opacity: 1;
+  opacity: 0.7;
   transform: scale(1);
 }
 
@@ -978,7 +982,7 @@ img {
 }
 
 .review__username {
-  font-family: "Ubuntu";
+  font-family: "Gagalin-Regular";
   font-size: 14px;
   margin-bottom: 20px;
 }
@@ -1168,7 +1172,7 @@ img {
   background: transparent;
 }
 .order__radio_checkbox .order__radio-elem:checked + .order__radio-fake:after {
-  background: url("../icons/check.svg") 50% no-repeat transparent;
+  background: url("../icons/check.png") 50% no-repeat transparent;
   background-size: contain;
   width: 0.6875rem;
   height: 0.5625rem;
@@ -1205,14 +1209,6 @@ img {
   right: 0;
 }
 
-.map__marker-icon {
-  position: relative;
-  width: 46px;
-  height: 57.727px;
-  left: 700px;
-  top: 135px;
-}
-
 .footer {
   background: url("../img/footer.jpg") center bottom no-repeat;
   background-size: cover;
@@ -1236,11 +1232,9 @@ img {
 
 .footer__col {
   width: 50%;
-  margin-bottom: 0.9375rem;
 }
 @media screen and (max-width: 480px) {
   .footer__col {
-    float: none;
     width: 100%;
     text-align: center;
   }
@@ -1254,16 +1248,18 @@ img {
 }
 
 .footer__phone {
+  display: flex;
+  align-items: center;
   color: #e35028;
   font-family: "Ubuntu", Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   font-size: 0.875rem;
 }
 
 .footer__col_right {
-  text-align: right;
-  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 480px) {
   .footer__col_right {
@@ -1272,14 +1268,9 @@ img {
 }
 
 .footer__phone-icon {
-  width: 0.8125rem;
-  height: 0.8125rem;
+  width: 0.6875rem;
+  height: 0.6875rem;
   margin-right: 8px;
-}
-
-.socials {
-  position: relative;
-  top: 50%;
 }
 
 .socials__item {
@@ -1302,6 +1293,7 @@ img {
 .socials__link-icon {
   width: 1.25rem;
   height: 1.25rem;
+  fill: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

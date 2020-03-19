@@ -1,4 +1,5 @@
 .menu-accordeon {
+	display: flex;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -7,7 +8,7 @@
 }
 
 .menu-accordeon__item {
-	float: left;
+	display: flex;
 	height: 100%;
 
 	&.active {
@@ -17,9 +18,10 @@
 
 		.menu-accordeon__content {
 			height: 100%;
-			float: left;
+			display: flex;
 			background: rgba(#2f3234, .93);
 			width: 100%;
+			max-width: 540px;;
 		}
 
 		.menu-accordeon__text {
@@ -27,7 +29,6 @@
 			font-size: rem(14px);
 			color: #fff;
 			padding: rem(60px) rem(30px);
-			width: 100%;
 			line-height: 1.8;
 		}
 	}
@@ -37,14 +38,17 @@
 	width: rem(80px);
 	display: block;
 	height: 100%;
-	float: left;
 	@include cover;
 	text-decoration: none;
-  	position: relative;
+	position: relative;
   
   	@include phones {
     width: rem(50px);
   }
+}
+
+.menu-accordeon__trigger-right {
+	background-position: right;
 }
 
 .menu-accordeon__trigger-text {
@@ -67,7 +71,6 @@
 
 .menu-accordeon__content {
 	height: 100%;
-	float: left;
 	background: rgba(#2f3234, .93);
 	width: 0;
 	overflow: hidden;
@@ -78,9 +81,7 @@
 	font-size: rem(14px);
 	color: #fff;
 	padding: rem(60px) rem(30px);
-	width: 100%;
 	line-height: 1.8;
-	display: none;
 
   @include phones {
     padding: rem(25px) rem(15px);

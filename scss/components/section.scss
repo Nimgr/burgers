@@ -5,9 +5,9 @@
     display: flex;
     overflow: hidden;
 
-    // &--align--top {
-    // justify-content: flex-start;
-    // }
+    &--align--top {
+    justify-content: flex-start;
+    }
 
     @include tablets {
         min-height: initial;
@@ -19,7 +19,6 @@
     color: $yellow;
     @include gagalin;
     margin-bottom: rem(12px);
-    font-family: "Gagalin";
     line-height: 1;
 
     &--centered {
@@ -37,6 +36,8 @@
 }
 
 .section__desc {
-    font-size: 50px;
-    font-family: "Lifehack";
+    font-size: 65px;
+    font-family: "Lifehack-Medium";
+    line-height: 1;
+    margin-top: 56px;
 }

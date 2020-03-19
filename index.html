@@ -11,6 +11,9 @@
 
 <body>
     <div class="wrapper">
+        <video autoplay loop muted class="video-bg">
+            <source src="./video/burger_video.mp4" type="video/mp4">
+        </video>
         <div class="maincontent">
             <section class="section hero">
                 <div class="container hero__container">
@@ -177,7 +180,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="menu-accordeon__item"><a class="menu-accordeon__trigger" href="#" style="background-image: url('./img/vegans.jpg')">
+                  <li class="menu-accordeon__item"><a class="menu-accordeon__trigger menu-accordeon__trigger-right" href="#" style="background-image: url('./img/vegans.jpg')">
                       <div class="menu-accordeon__trigger-text">Вегетарианское</div></a>
                     <div class="menu-accordeon__content">
                       <div class="menu-accordeon__text">
@@ -403,37 +406,31 @@
               </section>
 
               <footer class="section map">
-                  <div class="yandex-map" id="map">
-                      <div class="map__marker"><a class="map__marker-1" href="#"><svg class="map__marker-icon" style="fill: red">
-                          <use xlink:href="./icons/sprite.svg#map-marker"></use>
-                      </svg></a>
-                          
-                      </div>
-                  </div>
+                  <div class="yandex-map" id="map"></div>
                   <footer class="footer">
                       <div class="container footer__container">
                           <div class="footer__col">
-                              <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div><a
-                                  class="footer__phone" href="tel:+78123771377"><svg class="footer__phone-icon" style="fill: red">
+                              <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                              <a class="footer__phone" href="tel:+78123771377"><svg class="footer__phone-icon" style="fill: #e35028">
                                     <use xlink:href="./icons/sprite.svg#phone"></use>
                                 </svg>+7 (812) 377-13-77</a>
                           </div>
                           <div class="footer__col footer__col_right">
                               <ul class="socials">
                                   <li class="socials__item"><a class="socials__link" href="#">
-                                          <svg class="socials__link-icon" style="fill: #fff">
+                                          <svg class="socials__link-icon">
                                               <use xlink:href="./icons/sprite.svg#vk"></use>
                                           </svg></a></li>
                                   <li class="socials__item"><a class="socials__link" href="#">
-                                          <svg class="socials__link-icon" style="fill: #fff">
+                                          <svg class="socials__link-icon">
                                               <use xlink:href="./icons/sprite.svg#fb"></use>
                                           </svg></a></li>
                                   <li class="socials__item"><a class="socials__link" href="#">
-                                          <svg class="socials__link-icon" style="fill: #fff">
+                                          <svg class="socials__link-icon">
                                               <use xlink:href="./icons/sprite.svg#inst"></use>
                                           </svg></a></li>
                                   <li class="socials__item"><a class="socials__link" href="#">
-                                          <svg class="socials__link-icon" style="fill: #fff">
+                                          <svg class="socials__link-icon">
                                               <use xlink:href="./icons/sprite.svg#twitter"></use>
                                           </svg></a></li>
                               </ul>

@@ -20,10 +20,8 @@
 
 .footer__col {
 	width: 50%;
-	margin-bottom: rem(15px);
 
 	@include phones {
-		float: none;
 		width: 100%;
 		text-align: center;
 	}
@@ -36,6 +34,8 @@
 }
 
 .footer__phone {
+	display: flex;
+	align-items: center;
 	color: $red;
 	@include ubuntu(bold);
 	text-decoration: none;
@@ -43,8 +43,8 @@
 }
 
 .footer__col_right {
-  text-align: right;
-  margin-bottom: 0;
+	display: flex;
+	justify-content: flex-end;
 
 	@include phones {
 		text-align: center;
@@ -52,7 +52,7 @@
 }
 
 .footer__phone-icon {
-	width: rem(13px);
-	height: rem(13px);
+	width: rem(11px);
+	height: rem(11px);
 	margin-right: 8px;
 }

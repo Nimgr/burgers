@@ -4,7 +4,7 @@
 
     &:hover {
         .review__hover {
-            opacity: 1;
+            opacity: 0.7;
             transform: scale(1);
         }
     }
@@ -56,7 +56,7 @@
 }
 
 .review__username {
-    font-family: "Ubuntu";
+    font-family: "Gagalin-Regular";
     font-size: 14px;
     margin-bottom: 20px;
 }

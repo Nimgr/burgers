@@ -5,10 +5,10 @@
 }
 
 .team-accordeon__item {
-  margin-bottom: rem(40px);
+  margin-bottom: rem(10px);
   
   @include tablets {
-    margin-bottom: rem(30px);
+    margin-bottom: rem(10px);
   }
 
 	&:last-child {
@@ -25,8 +25,8 @@
 			}
 		}
 		.team-accordeon__content {
+			display: flex;
 			@extend %clearfix;
-			padding-top: rem(14px);
 			height: initial;
 		}
 	}
@@ -39,7 +39,7 @@
 	text-decoration: none;
 	position: relative;
 	display: block;
-	margin-bottom: rem(20px);
+	// margin-bottom: rem(20px);
 
 	&:before, &:after {
 		content: "";
@@ -48,7 +48,7 @@
 		left: rem(-18px);
 		top: rem(8px);
 		width: 0;
-    height: 0;
+    	height: 0;
 	}
 
 	&:before {
@@ -79,10 +79,12 @@
 }
 
 .team-accordeon__content {
+	display: flex;
 	@extend %clearfix;
-	padding-top: rem(14px);
 	height: 0;
 	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 20px;
 
 	@include tablets {
 		padding: 0 25%;
@@ -108,27 +110,31 @@
 }
 
 .team-accordeon__text {
-	max-width: 60%;
+	max-width: 230px;
+	margin-left: 20px;
+	@include ubuntu;
+	font-size: rem(14px);
+	opacity: 0.7;
 }
 
 .team-accordeon__pic, .team-accordeon__text {
-	float: left;
 
 	@include tablets {
-		float: none;
 		width: 100%;
 	}
 }
 
 .team-accordeon__title {
-	@include ubuntu(bold);
+	@include ubuntu;
 	font-size: rem(14px);
+	font-weight: 700;
 	color: #fff;
 	margin-bottom: rem(14px);
 }
 
 .team-accordeon__text-content {
-	@include ubuntu(light);
+	@include ubuntu;
 	color: #fff;
 	font-size: rem(14px);
+	font-weight: 300;
 }
