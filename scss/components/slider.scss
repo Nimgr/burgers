@@ -1,0 +1,30 @@
+.slider__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
+}
+
+.left {
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    left: 20px;
+    top: 50%;
+    transform: rotate(90deg);
+}
+
+.right {
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    right: 20px;
+    top: 50%;
+    transform: rotate(-90deg);
+}
+
+.slider__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -596,6 +596,18 @@ img {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .features__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .features__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .features__item {
   width: calc(100% / 3 - 26px);
@@ -619,6 +631,37 @@ img {
   font-family: "Ubuntu";
   color: #777675;
   font-size: 14px;
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
+}
+
+.left {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  left: 20px;
+  top: 50%;
+  transform: rotate(90deg);
+}
+
+.right {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  right: 20px;
+  top: 50%;
+  transform: rotate(-90deg);
+}
+
+.slider__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team {
@@ -755,7 +798,6 @@ img {
 
 .team-accordeon__pic {
   text-align: center;
-  width: 30%;
 }
 @media screen and (max-width: 768px) {
   .team-accordeon__pic {
