@@ -33,6 +33,14 @@
     &--color-white {
         color: white;
     }
+
+    @include tablets {
+        font-size: rem(50px);
+    }
+
+    @include phones {
+        font-size: rem(32px);
+    }
 }
 
 .section__desc {
@@ -40,4 +48,12 @@
     font-family: "Lifehack-Medium";
     line-height: 1;
     margin-top: 56px;
+
+    @include tablets {
+        font-size: rem(32px);
+    }
+
+    @include phones {
+        font-size: rem(25px);
+    }
 }
