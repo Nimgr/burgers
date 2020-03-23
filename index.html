@@ -57,7 +57,7 @@
                             <h3 class="section__desc">натуральные бургеры</h3>
                         </div>
                     </div>
-                    <button type="button" class="arrow-down"></button>
+                    <button type="button" class="arrow arrow__down"></button>
                 </div>
             </section>
             <section class="section features">
@@ -106,24 +106,36 @@
 
             <section class="section slider">
                 <div class="slider__wrapper">
-                    <div class="arrow-down left"></div>
+                    <div class="arrow arrow__left"></div>
                     <div class="slider__content">
                         <div class="slider__img">
+                            <a class="slider__link" href="#">
+                                <svg class="slider__link-icon">
+                                    <use xlink:href="./icons/sprite.svg#buns"></use>
+                                </svg>
+                            </a>
                             <img src="./img/burger-ink.png" alt="Burger-ink" class="slider__image-elem">
+                            <a class="slider__link" href="#">
+                                <svg class="slider__link-icon">
+                                    <use xlink:href="./icons/sprite.svg#kkal"></use>
+                                </svg>
+                            </a>
                         </div>
                         <div class="slider__descr">
-                            <h2 class="section__title">Dark Beef Burger</h2>
+                            <h2 class="section__title section__title--color--white">Dark Beef Burger</h2>
                             <p class="slider__descr-text">Ваш старый добрый знакомый, с рубленым 
                                 бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя 
                                 помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического 
                                 соуса чураско.
                             </p>
                             <div class="slider__descr-order">
-
+                                <p class="slider__descr-cost">500
+                                <span class="slider__descr-cost-currency">рублей</span></p>
+                                <button type="button" class="btn slider__btn">Заказать</button>
                             </div>
                         </div>
                     </div>
-                    <div class="arrow-down right"></div>
+                    <div class="arrow arrow__right"></div>
                 </div>
             </section>
             
@@ -192,7 +204,7 @@
             </section>
 
             <section class="section menu">
-                <div class="section__title section__title--color-white menu__title">Меню</div>
+                <div class="section__title section__title--color--white menu__title">Меню</div>
                 <ul class="menu-accordeon">
                   <li class="menu-accordeon__item active"><a class="menu-accordeon__trigger" href="#" style="background-image: url('./img/meats.jpg')">
                       <div class="menu-accordeon__trigger-text">Для мясоедов</div></a>
@@ -237,6 +249,7 @@
                                             сыр таким расплавленным.
                                         </p>
                                     <button type="button" class="btn review__btn">Подробнее</button>
+                                    <button type="button" class="btn review__btn-mobile">Читать отзыв</button>
                                 </div>
                             </div>
                         </div>

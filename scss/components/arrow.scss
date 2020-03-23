@@ -1,0 +1,34 @@
+.arrow {
+    width: rem(29px);
+    height: rem(14px);
+    @include cover;
+    background: url(../icons/arrow-scroll.svg);
+    border: none;
+    bottom: rem(40px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow__down {
+    position: absolute;
+}
+
+.arrow__left {
+    @include cover;
+    width: rem(35px);
+    height: rem(20px);
+    left: rem(20px);
+    top: 50%;
+    transform: rotate(90deg);
+    margin-left: rem(45px);
+}
+
+.arrow__right {
+    @include cover;
+    width: rem(35px);
+    height: rem(20px);
+    right: rem(20px);
+    top: 50%;
+    transform: rotate(-90deg);
+    margin-right: rem(45px);
+}

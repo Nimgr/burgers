@@ -359,13 +359,13 @@ template {
   font-style: normal;
 }
 html, body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -377,13 +377,13 @@ body {
 
 .wrapper {
   position: relative;
-  width: 100%;
-  min-height: 100%;
+  min-width: 0;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 .container {
-  width: 95%;
+  width: auto;
   max-width: 940px;
   margin: 0 auto;
 }
@@ -457,41 +457,31 @@ img {
   margin-bottom: 0.75rem;
   line-height: 1;
 }
-.section__title--centered {
-  text-align: center;
-  margin-bottom: 60px;
-}
-.section__title--color--black {
-  color: #000;
-}
-.section__title--color-white {
-  color: white;
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .section__title {
     font-size: 3.125rem;
   }
 }
-@media screen and (max-width: 480px) {
-  .section__title {
-    font-size: 2rem;
-  }
+.section__title--centered {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+.section__title--color--black {
+  color: #000;
+}
+.section__title--color--white {
+  color: white;
 }
 
 .section__desc {
-  font-size: 65px;
+  font-size: 4.0625rem;
   font-family: "Lifehack-Medium";
   line-height: 1;
-  margin-top: 56px;
-}
-@media screen and (max-width: 768px) {
-  .section__desc {
-    font-size: 2rem;
-  }
+  margin-top: 3.5rem;
 }
 @media screen and (max-width: 480px) {
   .section__desc {
-    font-size: 1.5625rem;
+    font-size: 3.375rem;
   }
 }
 
@@ -507,13 +497,19 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 13px;
+  padding-top: 0.8125rem;
 }
 
 .header__btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
 }
 
 .nav__list {
@@ -528,11 +524,11 @@ img {
 .nav__item:before {
   content: "";
   display: block;
-  width: 4px;
-  height: 4px;
+  width: 0.25rem;
+  height: 0.25rem;
   border-radius: 50%;
   background: currentColor;
-  margin: 0 15px;
+  margin: 0 0.9375rem;
 }
 .nav__item:first-child:before {
   display: none;
@@ -542,12 +538,15 @@ img {
   text-decoration: none;
   font-family: "Ubuntu";
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
 }
 
 .hero {
-  background: url(../img/texture.png) center center/cover no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: url(../img/texture.png);
   color: #ffffff;
   position: relative;
 }
@@ -563,51 +562,89 @@ img {
   align-items: center;
   flex: 0.8;
 }
+@media screen and (max-width: 768px) {
+  .hero__content {
+    flex-direction: column;
+  }
+}
 
 .hero__desc {
-  font-size: 65px;
+  font-size: 4.0625rem;
   font-family: "Lifehack-Medium";
   line-height: 1.1;
 }
 
 .hero__text {
   width: 50%;
-  padding-top: 94px;
-  margin-left: 55px;
+  padding-top: 5.875rem;
+  margin-left: 3.4375rem;
 }
 
 .hero__btn {
-  margin-left: 15px;
+  margin-left: 0.9375rem;
   color: white;
   font-family: "Ubuntu";
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .btn {
   background: #e35028;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 5px;
-  font-size: 13px;
+  border-radius: 0.3125rem;
+  font-size: 0.8125rem;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   border: none;
 }
 
-.arrow-down {
-  position: absolute;
-  width: 29px;
-  height: 14px;
-  background: url(../icons/arrow-scroll.svg) center center/cover no-repeat;
+.arrow {
+  width: 1.8125rem;
+  height: 0.875rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: url(../icons/arrow-scroll.svg);
   border: none;
-  bottom: 40px;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
+.arrow__down {
+  position: absolute;
+}
+
+.arrow__left {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 2.1875rem;
+  height: 1.25rem;
+  left: 1.25rem;
+  top: 50%;
+  transform: rotate(90deg);
+  margin-left: 2.8125rem;
+}
+
+.arrow__right {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 2.1875rem;
+  height: 1.25rem;
+  right: 1.25rem;
+  top: 50%;
+  transform: rotate(-90deg);
+  margin-right: 2.8125rem;
+}
+
 .features {
-  background: url("../img/features-bg.jpg") center center/cover no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: url("../img/features-bg.jpg");
   display: flex;
   align-items: center;
 }
@@ -615,12 +652,6 @@ img {
 .features__list {
   display: flex;
   justify-content: space-between;
-}
-@media screen and (max-width: 768px) {
-  .features__list {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 @media screen and (max-width: 480px) {
   .features__list {
@@ -643,14 +674,14 @@ img {
 }
 
 .feature__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Lifehack-Medium";
 }
 
 .feature__text {
   font-family: "Ubuntu";
   color: #777675;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .slider__wrapper {
@@ -660,28 +691,83 @@ img {
   background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
 }
 
-.left {
-  position: absolute;
-  width: 35px;
-  height: 20px;
-  left: 20px;
-  top: 50%;
-  transform: rotate(90deg);
-}
-
-.right {
-  position: absolute;
-  width: 35px;
-  height: 20px;
-  right: 20px;
-  top: 50%;
-  transform: rotate(-90deg);
-}
-
 .slider__content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .slider__content {
+    flex-direction: column;
+  }
+}
+
+.slider__img {
+  margin-top: 5.625rem;
+}
+@media screen and (max-width: 768px) {
+  .slider__img {
+    display: inline-flex;
+  }
+}
+
+.slider__descr {
+  width: 28.125rem;
+}
+
+.slider__descr-text {
+  font-family: "Ubuntu";
+  color: white;
+  font-size: 0.875rem;
+  margin-top: 3.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.slider__descr-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__descr-cost {
+  font-family: "Gagalin-Regular";
+  color: #e35028;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 480px) {
+  .slider__descr-cost {
+    font-size: 3.125rem;
+  }
+}
+
+.slider__descr-cost-currency {
+  font-family: "Gagalin-Regular";
+  color: #e35028;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.slider__btn {
+  color: white;
+  font-family: "Ubuntu";
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  height: 2.25rem;
+  margin-left: 0;
+}
+
+.slider__link {
+  display: inline-block;
+  max-width: 3.75rem;
+  max-height: 3.75rem;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.slider__link-icon {
+  width: 3.75rem;
+  height: 3.75rem;
 }
 
 .team {
@@ -774,6 +860,11 @@ img {
   position: relative;
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .team-accordeon__trigger {
+    font-size: 1.5625rem;
+  }
+}
 .team-accordeon__trigger:before, .team-accordeon__trigger:after {
   content: "";
   display: block;
@@ -812,8 +903,8 @@ img {
   display: flex;
   height: 0;
   overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 @media screen and (max-width: 768px) {
   .team-accordeon__content {
@@ -843,8 +934,8 @@ img {
 }
 
 .team-accordeon__text {
-  max-width: 230px;
-  margin-left: 20px;
+  max-width: 14.375rem;
+  margin-left: 1.25rem;
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -906,7 +997,7 @@ img {
   display: flex;
   background: rgba(47, 50, 52, 0.93);
   width: 100%;
-  max-width: 540px;
+  max-width: 33.75rem;
 }
 .menu-accordeon__item.active .menu-accordeon__text {
   font-family: "Ubuntu", Helvetica, sans-serif;
@@ -980,7 +1071,7 @@ img {
 .reviews {
   background: black;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 
 .reviews__list {
@@ -992,6 +1083,12 @@ img {
 .reviews__item {
   width: 25%;
   height: 50%;
+}
+@media screen and (max-width: 768px) {
+  .reviews__item {
+    width: 50%;
+    height: 25%;
+  }
 }
 
 .review {
@@ -1033,7 +1130,7 @@ img {
 .review__hover {
   position: absolute;
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: 0.875rem;
   color: white;
   top: 0;
   left: 0;
@@ -1045,35 +1142,63 @@ img {
   display: flex;
   justify-content: center;
   text-align: left;
-  padding: 50px 20px;
+  padding: 3.125rem 1.25rem;
 }
 
 .review__username {
   font-family: "Gagalin-Regular";
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .review__username {
+    font-size: 1.5rem;
+  }
 }
 
 .review__content {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
+}
+@media screen and (max-width: 480px) {
+  .review__content {
+    display: none;
+  }
 }
 
 .review__btn {
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: 0.875rem;
   color: white;
   display: inline-flex;
   align-self: flex-start;
+}
+@media screen and (max-width: 480px) {
+  .review__btn {
+    display: none;
+  }
+}
+
+.review__btn-mobile {
+  display: none;
+  font-family: "Ubuntu";
+  font-size: 0.8125rem;
+  color: white;
+  align-self: flex-start;
+}
+@media screen and (max-width: 480px) {
+  .review__btn-mobile {
+    display: inline-flex;
+  }
 }
 
 .review__hover-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  max-width: 15.625rem;
 }
 
 .order {
@@ -1290,10 +1415,13 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 @media screen and (max-width: 480px) {
   .footer__container {
     flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -1303,7 +1431,7 @@ img {
 @media screen and (max-width: 480px) {
   .footer__col {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -1330,14 +1458,14 @@ img {
 }
 @media screen and (max-width: 480px) {
   .footer__col_right {
-    text-align: center;
+    justify-content: center;
   }
 }
 
 .footer__phone-icon {
   width: 0.6875rem;
   height: 0.6875rem;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .socials__item {

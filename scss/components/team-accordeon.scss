@@ -45,6 +45,10 @@
 	display: block;
 	// margin-bottom: rem(20px);
 
+	@include tablets {
+		font-size: rem(25px);
+	}
+
 	&:before, &:after {
 		content: "";
 		display: block;
@@ -87,8 +91,8 @@
 	@extend %clearfix;
 	height: 0;
 	overflow: hidden;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: rem(20px);
+	margin-bottom: rem(20px);
 
 	@include tablets {
 		padding: 0 25%;
@@ -113,8 +117,8 @@
 }
 
 .team-accordeon__text {
-	max-width: 230px;
-	margin-left: 20px;
+	max-width: rem(230px);
+	margin-left: rem(20px);
 	@include ubuntu;
 	font-size: rem(14px);
 	opacity: 0.7;

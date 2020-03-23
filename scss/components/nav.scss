@@ -1,4 +1,11 @@
-$itemsMargin: 16px;
+$itemsMargin: rem(16px);
+
+.nav {
+
+    @include tablets {
+        display: none;
+    }
+}
 
 .nav__list {
     display: flex;
@@ -12,12 +19,11 @@ $itemsMargin: 16px;
         &:before {
             content: "";
             display: block;
-            width: 4px;
-            height: 4px;
+            width: rem(4px);
+            height: rem(4px);
             border-radius: 50%;
             background: currentColor;
-            // 
-            margin: 0 15px;
+            margin: 0 rem(15px);
         }
 
     &:first-child {
@@ -33,6 +39,6 @@ $itemsMargin: 16px;
     text-decoration: none;
     font-family: "Ubuntu";
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
 }
