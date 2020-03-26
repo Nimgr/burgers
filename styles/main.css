@@ -460,14 +460,16 @@ img {
 @media screen and (max-width: 480px) {
   .section__title {
     font-size: 3.125rem;
+    text-align: center;
   }
 }
 .section__title--centered {
   text-align: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 5.3125rem;
 }
 .section__title--color--black {
   color: #000;
+  margin-top: 10.9375rem;
 }
 .section__title--color--white {
   color: white;
@@ -482,6 +484,7 @@ img {
 @media screen and (max-width: 480px) {
   .section__desc {
     font-size: 3.375rem;
+    text-align: center;
   }
 }
 
@@ -575,7 +578,7 @@ img {
 }
 
 .hero__text {
-  width: 50%;
+  width: 100%;
   padding-top: 5.875rem;
   margin-left: 3.4375rem;
 }
@@ -641,12 +644,16 @@ img {
 }
 
 .features {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background: url("../img/features-bg.jpg");
+  background: url("../img/features-bg.jpg") center center/cover no-repeat;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.features__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .features__list {
@@ -676,6 +683,7 @@ img {
 .feature__title {
   font-size: 1.5rem;
   font-family: "Lifehack-Medium";
+  margin-top: 1.875rem;
 }
 
 .feature__text {
@@ -684,20 +692,47 @@ img {
   font-size: 0.875rem;
 }
 
-.slider__wrapper {
+.burgers {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
 }
 
-.slider__content {
+.slider {
+  display: flex;
+  align-items: center;
+}
+.slider__wrap {
+  flex: 1;
+  overflow: hidden;
+}
+.slider__list {
+  display: flex;
+}
+.slider__item {
+  font-size: 72px;
+  flex: 0 0 100%;
+  font-family: "Gagalin-Regular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37.5rem;
+}
+.slider__item:nth-child(1) {
+  background: orange;
+}
+.slider__item:nth-child(2) {
+  background: red;
+}
+
+.slider__list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .slider__content {
+  .slider__list {
     flex-direction: column;
   }
 }
@@ -1432,6 +1467,7 @@ img {
   .footer__col {
     width: 100%;
     justify-content: center;
+    text-align: center;
   }
 }
 
@@ -1450,6 +1486,11 @@ img {
   font-weight: 700;
   text-decoration: none;
   font-size: 0.875rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__phone {
+    margin-left: 20%;
+  }
 }
 
 .footer__col_right {

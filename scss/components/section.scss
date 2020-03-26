@@ -23,15 +23,17 @@
 
     @include phones {
         font-size: rem(50px);
+        text-align: center;
     }
 
     &--centered {
         text-align: center;
-        margin-bottom: rem(60px);
+        margin-bottom: rem(85px);
     }
 
     &--color--black {
         color: $black;
+        margin-top: rem(175px);
     }
 
     &--color--white {
@@ -47,5 +49,6 @@
 
     @include phones {
         font-size: rem(54px);
+        text-align: center;
     }
 }

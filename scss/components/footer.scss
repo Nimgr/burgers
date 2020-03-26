@@ -27,6 +27,7 @@
 	@include phones {
 		width: 100%;
 		justify-content: center;
+		text-align: center;
 	}
 }
 
@@ -43,6 +44,10 @@
 	@include ubuntu(bold);
 	text-decoration: none;
 	font-size: rem(14px);
+
+	@include phones {
+		margin-left: 20%;
+	}
 }
 
 .footer__col_right {

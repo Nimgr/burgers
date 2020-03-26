@@ -1,11 +1,41 @@
-.slider__wrapper {
+.burgers {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
 }
 
-.slider__content {
+.slider {
+    display: flex;
+    align-items: center;
+
+    &__wrap {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        font-size: 72px;
+        flex: 0 0 100%;
+        font-family: "Gagalin-Regular";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(600px);
+        &:nth-child(1) {
+            background: orange;
+        }
+        &:nth-child(2) {
+            background: red;
+        }
+    }
+}
+
+.slider__list {
     display: flex;
     justify-content: center;
     align-items: center;

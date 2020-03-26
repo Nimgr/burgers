@@ -1,8 +1,14 @@
 .features {
-    @include cover;
-    background: url('../img/features-bg.jpg');
+    background: url('../img/features-bg.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.features__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .features__list {
