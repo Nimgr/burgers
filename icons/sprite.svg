@@ -191,7 +191,7 @@
 		C40.714,22.125,40.047,23.5,38.997,24.638z"/>
     </symbol>
 
-<symbol id="burger">
+<symbol id="burger" viewBox="0 0 45.748 44.625">
         <g>
 	<g>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M8.502,31.551c-0.005-0.227-0.009-0.484-0.015-0.742

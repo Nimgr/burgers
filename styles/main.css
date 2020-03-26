@@ -457,6 +457,11 @@ img {
   margin-bottom: 0.75rem;
   line-height: 1;
 }
+@media screen and (max-width: 768px) {
+  .section__title {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 480px) {
   .section__title {
     font-size: 3.125rem;
@@ -480,6 +485,11 @@ img {
   font-family: "Lifehack-Medium";
   line-height: 1;
   margin-top: 3.5rem;
+}
+@media screen and (max-width: 768px) {
+  .section__desc {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 480px) {
   .section__desc {
@@ -507,6 +517,18 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.sandwich-icon {
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .sandwich-icon {
+    display: block;
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {

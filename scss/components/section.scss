@@ -21,6 +21,10 @@
     margin-bottom: rem(12px);
     line-height: 1;
 
+    @include tablets {
+        text-align: center;
+    }
+
     @include phones {
         font-size: rem(50px);
         text-align: center;
@@ -46,6 +50,10 @@
     font-family: "Lifehack-Medium";
     line-height: 1;
     margin-top: rem(56px);
+
+    @include tablets {
+        text-align: center;
+    }
 
     @include phones {
         font-size: rem(54px);
