@@ -53,6 +53,10 @@
     justify-content: center;
     text-align: left;
     padding: rem(50px) rem(20px);
+
+    @include tablets {
+        padding: rem(20px) rem(5px);
+    }
 }
 
 .review__username {
@@ -60,8 +64,14 @@
     font-size: rem(14px);
     margin-bottom: rem(20px);
 
+    @include tablets {
+        text-align: center;
+        margin-bottom: rem(10px);
+    }
+
     @include phones {
         font-size: rem(24px);
+        text-align: center;
     }
 }
 
@@ -71,6 +81,10 @@
     font-family: "Ubuntu";
     font-size: rem(14px);
     font-weight: 300;
+
+    @include tablets {
+        text-align: center;
+    }
 
     @include phones {
         display: none;
@@ -83,6 +97,11 @@
     color: white;
     display: inline-flex;
     align-self: flex-start;
+
+    @include tablets {
+        display: flex;
+        align-self: center;
+    }
 
     @include phones {
         display: none;

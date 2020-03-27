@@ -818,7 +818,7 @@ img {
   display: inline-block;
   max-width: 3.75rem;
   max-height: 3.75rem;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 0.3s;
 }
 
@@ -1201,15 +1201,27 @@ img {
   text-align: left;
   padding: 3.125rem 1.25rem;
 }
+@media screen and (max-width: 768px) {
+  .review__hover {
+    padding: 1.25rem 0.3125rem;
+  }
+}
 
 .review__username {
   font-family: "Gagalin-Regular";
   font-size: 0.875rem;
   margin-bottom: 1.25rem;
 }
+@media screen and (max-width: 768px) {
+  .review__username {
+    text-align: center;
+    margin-bottom: 0.625rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .review__username {
     font-size: 1.5rem;
+    text-align: center;
   }
 }
 
@@ -1219,6 +1231,11 @@ img {
   font-family: "Ubuntu";
   font-size: 0.875rem;
   font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .review__content {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 480px) {
   .review__content {
@@ -1232,6 +1249,12 @@ img {
   color: white;
   display: inline-flex;
   align-self: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .review__btn {
+    display: flex;
+    align-self: center;
+  }
 }
 @media screen and (max-width: 480px) {
   .review__btn {
