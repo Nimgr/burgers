@@ -15,6 +15,7 @@
     width: 25px;
     height: 25px;
     display: none;
+    cursor: pointer;
 
     @include tablets {
         display: block;

@@ -72,6 +72,7 @@
     @include phones {
         font-size: rem(24px);
         text-align: center;
+        margin-top: rem(50px);
     }
 }
 
@@ -124,4 +125,8 @@
     display: flex;
     flex-direction: column;
     max-width: rem(250px);
+    @include phones {
+        align-items: center;
+        vertical-align: center;
+    }
 }

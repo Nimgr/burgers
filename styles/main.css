@@ -383,7 +383,7 @@ body {
 }
 
 .container {
-  width: auto;
+  width: 95%;
   max-width: 940px;
   margin: 0 auto;
 }
@@ -470,11 +470,10 @@ img {
 }
 .section__title--centered {
   text-align: center;
-  margin-bottom: 5.3125rem;
+  margin-bottom: 1.875rem;
 }
 .section__title--color--black {
   color: #000;
-  margin-top: 10.9375rem;
 }
 .section__title--color--white {
   color: white;
@@ -523,6 +522,7 @@ img {
   width: 25px;
   height: 25px;
   display: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .sandwich-icon {
@@ -593,6 +593,21 @@ img {
   }
 }
 
+.hero__image {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .hero__image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__image-elem {
+    margin-right: 0;
+  }
+}
+
 .hero__desc {
   font-size: 4.0625rem;
   font-family: "Lifehack-Medium";
@@ -600,9 +615,14 @@ img {
 }
 
 .hero__text {
-  width: 100%;
+  width: 50%;
   padding-top: 5.875rem;
-  margin-left: 3.4375rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__text {
+    width: 100%;
+    padding-top: 1.25rem;
+  }
 }
 
 .hero__btn {
@@ -622,6 +642,7 @@ img {
   display: inline-block;
   padding: 0.625rem 0.9375rem;
   border: none;
+  cursor: pointer;
 }
 
 .arrow {
@@ -675,7 +696,6 @@ img {
 .features__container {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .features__list {
@@ -692,14 +712,33 @@ img {
 .features__item {
   width: calc(100% / 3 - 26px);
 }
+@media screen and (max-width: 480px) {
+  .features__item {
+    width: 100%;
+    display: flex;
+  }
+}
 
 .feature {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .feature__content {
+    text-align: left;
+    margin-left: 1.25rem;
+  }
+}
+
 .feature__img {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .feature__img {
+    max-width: 6.25rem;
+    width: 100%;
+  }
 }
 
 .feature__title {
@@ -998,6 +1037,11 @@ img {
   font-size: 0.875rem;
   opacity: 0.7;
 }
+@media screen and (max-width: 768px) {
+  .team-accordeon__text {
+    margin-left: 0;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .team-accordeon__pic, .team-accordeon__text {
@@ -1222,6 +1266,7 @@ img {
   .review__username {
     font-size: 1.5rem;
     text-align: center;
+    margin-top: 3.125rem;
   }
 }
 
@@ -1279,6 +1324,12 @@ img {
   display: flex;
   flex-direction: column;
   max-width: 15.625rem;
+}
+@media screen and (max-width: 480px) {
+  .review__hover-wrapper {
+    align-items: center;
+    vertical-align: center;
+  }
 }
 
 .order {
@@ -1495,8 +1546,6 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
 }
 @media screen and (max-width: 480px) {
   .footer__container {
@@ -1513,6 +1562,9 @@ img {
     width: 100%;
     justify-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1521,6 +1573,11 @@ img {
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__address {
+    margin-bottom: 0.625rem;
+  }
 }
 
 .footer__phone {
@@ -1534,7 +1591,7 @@ img {
 }
 @media screen and (max-width: 480px) {
   .footer__phone {
-    margin-left: 20%;
+    margin-bottom: 1.25rem;
   }
 }
 

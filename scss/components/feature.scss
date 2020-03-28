@@ -2,9 +2,20 @@
     text-align: center;
 }
 
+.feature__content {
+    @include phones {
+        text-align: left;
+        margin-left: rem(20px);
+    }
+}
+
 .feature__img {
     display: flex;
     justify-content: center;
+    @include phones {
+        max-width: rem(100px);
+        width: 100%;
+    }
 }
 
 .feature__title {

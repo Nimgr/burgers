@@ -21,6 +21,19 @@
     }
 }
 
+.hero__image {
+    width: 50%;
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.hero__image-elem {
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
 .hero__desc {
     font-size: rem(65px);
     @include lifehack();
@@ -28,9 +41,12 @@
 }
 
 .hero__text {
-    width: 100%;
+    width: 50%;
     padding-top: rem(94px);
-    margin-left: rem(55px);
+    @include tablets {
+        width: 100%;
+        padding-top: rem(20px);
+    }
 }
 
 .hero__btn {

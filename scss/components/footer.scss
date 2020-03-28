@@ -12,9 +12,6 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-left: rem(80px);
-	margin-right: rem(80px);
-
 	@include phones {
 		flex-direction: column;
 		justify-content: center;
@@ -28,6 +25,9 @@
 		width: 100%;
 		justify-content: center;
 		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -35,6 +35,9 @@
 	color: #ffffff;
 	@include ubuntu();
 	font-size: rem(14px);
+	@include phones {
+		margin-bottom: rem(10px);
+	}
 }
 
 .footer__phone {
@@ -44,9 +47,8 @@
 	@include ubuntu(bold);
 	text-decoration: none;
 	font-size: rem(14px);
-
 	@include phones {
-		margin-left: 20%;
+		margin-bottom: rem(20px);
 	}
 }
 

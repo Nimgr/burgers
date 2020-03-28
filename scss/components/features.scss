@@ -8,7 +8,6 @@
 .features__container {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .features__list {
@@ -23,4 +22,8 @@
 
 .features__item {
     width: calc(100% / 3 - 26px);
+    @include phones {
+        width: 100%;
+        display: flex;
+    }
 }

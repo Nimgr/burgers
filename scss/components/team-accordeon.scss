@@ -122,6 +122,9 @@
 	@include ubuntu;
 	font-size: rem(14px);
 	opacity: 0.7;
+	@include tablets {
+		margin-left: 0;
+	}
 }
 
 .team-accordeon__pic, .team-accordeon__text {
