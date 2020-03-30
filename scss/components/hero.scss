@@ -13,11 +13,14 @@
 
 .hero__content {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex: .8;
 
     @include tablets {
         flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
 }
 
@@ -25,12 +28,6 @@
     width: 50%;
     @include tablets {
         width: 100%;
-    }
-}
-
-.hero__image-elem {
-    @include tablets {
-        margin-right: 0;
     }
 }
 

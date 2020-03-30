@@ -26,27 +26,28 @@
                                         <a href="#" class="nav__link">О нас</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">Бургеры</a>
+                                        <a href="#section-2" class="nav__link">Бургеры</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">Команда</a>
+                                        <a href="#section-3" class="nav__link">Команда</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">Меню</a>
+                                        <a href="#section-4" class="nav__link">Меню</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">Отзывы</a>
+                                        <a href="#section-5" class="nav__link">Отзывы</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">Как мы работаем</a>
+                                        <a href="#section-6" class="nav__link">Как мы работаем</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="#" class="nav__link">Контакты</a>
+                                        <a href="#section-8" class="nav__link">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
                             <button type="button" class="btn hero__btn">Заказать</button>
-                            <img src="./img/sandwich.png" alt="Sandwich" class="sandwich-icon">
+                            <a href="#" class="nav__direction"><img src="./img/sandwich.png" alt="Sandwich" class="sandwich-icon">
+                            </a>
                         </div>
                     </header>
                     <div class="hero__content">
@@ -105,10 +106,10 @@
                 </div>
             </section>
 
-            <section class="section burgers">
+            <section class="section burgers" id="section-2">
                 <div class="container">
-                    <div class="slider">
-                        <a href="#" class="arrow arrow__left"></a>
+                    <div class="slider" id="slider1">
+                        <a href="#" class="arrow arrow__left" data-vector="previous"></a>
                         <div class="slider__wrap">
                             <ul class="slider__list">
                                 <li class="slider__item">
@@ -117,16 +118,25 @@
                                             <svg class="slider__link-icon">
                                                 <use xlink:href="./icons/sprite.svg#burger"></use>
                                             </svg>
+                                            <p class="slider__link__content">Состав</p>
+                                                <div class="content__drop">
+                                                    <ul class="content__list">
+                                                        <li class="content__item-top"></li>
+                                                        <li class="content__item-bottom"></li>
+                                                    </ul>
+                                                </div>
                                         </a>
-                                        <img src="./img/burger-ink.png" alt="Burger-ink" class="slider__image-elem">
+                                        <img src="./img/burgers-slider/burger-ink.png" alt="Burger-ink" class="slider__image-elem">
                                         <a class="slider__link" href="#">
                                             <svg class="slider__link-icon">
                                                 <use xlink:href="./icons/sprite.svg#kkal"></use>
                                             </svg>
+                                            <p class="slider__link__content slider__link__content-number">1200</p>
+                                            <p class="slider__link__content slider__link__content-kkal">ккал</p>
                                         </a>
                                     </div>
                                     <div class="slider__descr">
-                                        <h2 class="section__title section__title--color--white">Dark Beef Burger</h2>
+                                        <h2 class="section__title section__title--color--white burgers__title">Dark Beef Burger</h2>
                                         <p class="slider__descr-text">Ваш старый добрый знакомый, с рубленым 
                                             бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя 
                                             помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического 
@@ -139,18 +149,165 @@
                                         </div>
                                     </div>
                                 </li>
-                                
+                                <li class="slider__item">
+                                    <div class="slider__img">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#burger"></use>
+                                            </svg>
+                                            <p class="slider__link__content">Состав</p>
+                                                <div class="content__drop">
+                                                    <ul class="content__list">
+                                                        <li class="content__item-top"></li>
+                                                        <li class="content__item-bottom"></li>
+                                                    </ul>
+                                                </div>
+                                        </a>
+                                        <img src="./img/burgers-slider/burger_sandwich.png" alt="Burger-ink" class="slider__image-elem">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#kkal"></use>
+                                            </svg>
+                                            <p class="slider__link__content slider__link__content-number">1200</p>
+                                            <p class="slider__link__content slider__link__content-kkal">ккал</p>
+                                        </a>
+                                    </div>
+                                    <div class="slider__descr">
+                                        <h2 class="section__title section__title--color--white burgers__title">Dark Beef Burger</h2>
+                                        <p class="slider__descr-text">Ваш старый добрый знакомый, с рубленым 
+                                            бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя 
+                                            помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического 
+                                            соуса чураско.
+                                        </p>
+                                        <div class="slider__descr-order">
+                                            <p class="slider__descr-cost">500
+                                            <span class="slider__descr-cost-currency">рублей</span></p>
+                                            <button type="button" class="btn slider__btn">Заказать</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__img">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#burger"></use>
+                                            </svg>
+                                            <p class="slider__link__content">Состав</p>
+                                                <div class="content__drop">
+                                                    <ul class="content__list">
+                                                        <li class="content__item-top"></li>
+                                                        <li class="content__item-bottom"></li>
+                                                    </ul>
+                                                </div>
+                                        </a>
+                                        <img src="./img/burgers-slider/cheeseburger.png" alt="Burger-ink" class="slider__image-elem">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#kkal"></use>
+                                            </svg>
+                                            <p class="slider__link__content slider__link__content-number">1200</p>
+                                            <p class="slider__link__content slider__link__content-kkal">ккал</p>
+                                        </a>
+                                    </div>
+                                    <div class="slider__descr">
+                                        <h2 class="section__title section__title--color--white burgers__title">Dark Beef Burger</h2>
+                                        <p class="slider__descr-text">Ваш старый добрый знакомый, с рубленым 
+                                            бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя 
+                                            помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического 
+                                            соуса чураско.
+                                        </p>
+                                        <div class="slider__descr-order">
+                                            <p class="slider__descr-cost">500
+                                            <span class="slider__descr-cost-currency">рублей</span></p>
+                                            <button type="button" class="btn slider__btn">Заказать</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__img">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#burger"></use>
+                                            </svg>
+                                            <p class="slider__link__content">Состав</p>
+                                                <div class="content__drop">
+                                                    <ul class="content__list">
+                                                        <li class="content__item-top"></li>
+                                                        <li class="content__item-bottom"></li>
+                                                    </ul>
+                                                </div>
+                                        </a>
+                                        <img src="./img/burgers-slider/chicken_burger.png" alt="Burger-ink" class="slider__image-elem">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#kkal"></use>
+                                            </svg>
+                                            <p class="slider__link__content slider__link__content-number">1200</p>
+                                            <p class="slider__link__content slider__link__content-kkal">ккал</p>
+                                        </a>
+                                    </div>
+                                    <div class="slider__descr">
+                                        <h2 class="section__title section__title--color--white burgers__title">Dark Beef Burger</h2>
+                                        <p class="slider__descr-text">Ваш старый добрый знакомый, с рубленым 
+                                            бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя 
+                                            помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического 
+                                            соуса чураско.
+                                        </p>
+                                        <div class="slider__descr-order">
+                                            <p class="slider__descr-cost">500
+                                            <span class="slider__descr-cost-currency">рублей</span></p>
+                                            <button type="button" class="btn slider__btn">Заказать</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__img">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#burger"></use>
+                                            </svg>
+                                            <p class="slider__link__content">Состав</p>
+                                                <div class="content__drop">
+                                                    <ul class="content__list">
+                                                        <li class="content__item-top"></li>
+                                                        <li class="content__item-bottom"></li>
+                                                    </ul>
+                                                </div>
+                                        </a>
+                                        <img src="./img/burgers-slider/spicy_shrimp_burger.png" alt="Burger-ink" class="slider__image-elem">
+                                        <a class="slider__link" href="#">
+                                            <svg class="slider__link-icon">
+                                                <use xlink:href="./icons/sprite.svg#kkal"></use>
+                                            </svg>
+                                            <p class="slider__link__content slider__link__content-number">1200</p>
+                                            <p class="slider__link__content slider__link__content-kkal">ккал</p>
+                                        </a>
+                                    </div>
+                                    <div class="slider__descr">
+                                        <h2 class="section__title section__title--color--white burgers__title">Dark Beef Burger</h2>
+                                        <p class="slider__descr-text">Ваш старый добрый знакомый, с рубленым 
+                                            бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя 
+                                            помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического 
+                                            соуса чураско.
+                                        </p>
+                                        <div class="slider__descr-order">
+                                            <p class="slider__descr-cost">500
+                                            <span class="slider__descr-cost-currency">рублей</span></p>
+                                            <button type="button" class="btn slider__btn">Заказать</button>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <a href="#" class="arrow arrow__right"></a>
+                        <a href="#" class="arrow arrow__right" data-vector="next"></a>
                     </div>
                 </div>
             </section>
             
-            <section class="section team">
+            <section class="section team" id="section-3">
                 <div class="team__box">
                     <h2 class="section__title">Команда</h2>
-                    <ul class="team-accordeon">
+                    <ul class="team-accordeon" id="accordeon">
                         <li class="team-accordeon__item">
                             <a href="#" class="team-accordeon__trigger">Дэниэл Редклифф</a>
                             <div class="team-accordeon__content">
@@ -211,7 +368,7 @@
                 </div>
             </section>
 
-            <section class="section menu">
+            <section class="section menu" id="section-4">
                 <div class="section__title section__title--color--white menu__title">Меню</div>
                 <ul class="menu-accordeon">
                   <li class="menu-accordeon__item active"><a class="menu-accordeon__trigger" href="#" style="background-image: url('./img/meats.jpg')">
@@ -244,7 +401,7 @@
                 </ul>
               </section>
 
-            <section class="reviews">
+            <section class="reviews" id="section-5">
                 <ul class="reviews__list">
                     <li class="reviews__item review">
                         <div class="review__img-wrapper" style="background: url('./img/1.jpg') center center / cover no-repeat; width: 100%; height: 100%;">
@@ -381,7 +538,7 @@
                 <div class="container">
                   <div class="section__title">Закажите доставку</div>
                   <div class="order__form">
-                    <form class="order__form-tag" id="order-form">
+                    <form class="order__form-tag" id="order-form" action="section-7">
                       <div class="order__form-col">
                         <div class="order__form-row order__form-row_double">
                           <label class="order__form-block">
@@ -456,7 +613,7 @@
                 </div>
               </section>
 
-              <footer class="section map">
+              <footer class="section map" id="section-8">
                   <div class="yandex-map" id="map"></div>
                   <footer class="footer">
                       <div class="container footer__container">
@@ -491,6 +648,8 @@
               </footer>
         </div>
     </div>
+    <script src="app.js"></script>
+    <script src="accordeon.js"></script>
 </body>
 
 </html>
