@@ -943,7 +943,7 @@ img {
   margin-top: 0.625rem;
 }
 
-.slider__link:hover .content__drop {
+.slider__link-img:hover .content__drop {
   top: 50px;
   left: 150px;
   opacity: 1;
