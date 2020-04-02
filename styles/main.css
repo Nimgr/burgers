@@ -821,6 +821,11 @@ img {
   }
 }
 
+.slider__wrap {
+  flex: 1;
+  overflow: hidden;
+}
+
 .slider__img {
   display: flex;
   flex-direction: column;
@@ -890,7 +895,7 @@ img {
   margin-left: 0;
 }
 
-.slider__link {
+.slider__link-img {
   opacity: 0.8;
   transition: 0.3s;
   width: 100px;
@@ -900,7 +905,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-.slider__link:hover {
+.slider__link-img:hover {
   background-color: #e35028;
 }
 

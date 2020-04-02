@@ -46,6 +46,11 @@
     }
 }
 
+.slider__wrap {
+    flex: 1;
+    overflow: hidden;
+}
+
 .slider__img {
     display: flex;
     flex-direction: column;
@@ -110,7 +115,7 @@
     margin-left: 0;
 }
 
-.slider__link {
+.slider__link-img {
 	opacity: .8;
     transition: .3s;
     width: 100px;
