@@ -3,6 +3,7 @@
     background: url(../img/texture.png);
     color: #ffffff;
     position: relative;
+    display: flex;
 }
 
 .hero__container {
@@ -28,6 +29,9 @@
     width: 50%;
     @include tablets {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

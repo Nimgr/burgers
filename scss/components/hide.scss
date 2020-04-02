@@ -1,0 +1,28 @@
+.hide {
+    display: none;
+    background-color: #2f3234;
+}
+
+.nav__hide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+}
+
+.nav__item-hide {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item-point {
+    display: flex;
+    align-items: center;
+    content: "";
+    width: rem(4px);
+    height: rem(4px);
+    border-radius: 50%;
+    background: currentColor;
+    margin: 0 rem(15px);
+}
