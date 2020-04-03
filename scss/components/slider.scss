@@ -8,7 +8,6 @@
 .slider {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     &__wrap {
         flex: 1;
@@ -17,8 +16,6 @@
 
     &__list {
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     &__item {
@@ -26,9 +23,8 @@
         flex: 0 0 100%;
         font-family: "Gagalin-Regular";
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: rem(600px);
+        width: 100%;
+        flex-shrink: 0;
         
         // &:nth-child(1) {
         //     background: orange;
@@ -44,11 +40,6 @@
             align-items: center;
         }
     }
-}
-
-.slider__wrap {
-    flex: 1;
-    overflow: hidden;
 }
 
 .slider__img {
@@ -84,8 +75,7 @@
 
 .slider__descr-order {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
 .slider__descr-cost {
@@ -112,7 +102,7 @@
     text-transform: uppercase;
     font-size: rem(13px);
     height: rem(36px);
-    margin-left: 0;
+    margin-left: rem(20px);
 }
 
 .slider__link-img {
@@ -146,6 +136,11 @@
   height: rem(60px);
 }
 
+.slider__link-scale {
+    width: rem(60px);
+    height: rem(60px);
+  }
+
 .slider__image-elem {
     @include tablets {
         width: 70%;
@@ -174,27 +169,20 @@
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    position: relative;
+    position: absolute;
     min-width: 200px;
+    right: 0;
+    top: -9999px;
     opacity: 0;
+    transition: opacity .5s;
 }
-
-// .content__drop::before {
-//     content: '';
-//     display: flex;
-//     border: 10px solid transparent;
-//     border-bottom: 10px solid #fff;
-//     position: absolute;
-//     bottom: 100%;
-//     right: 10px;
-// }
 
 .content__drop::after {
     content: '';
     display: flex;
     width: 100%;
-    height: 30px;
-    position: relative;
+    position: absolute;
+    bottom: 100%;
     left: 0;
 }
 
@@ -205,6 +193,7 @@
 
 .content__item {
     display: flex;
+    align-items: center;
 }
 
 .content__item-icon {
@@ -215,4 +204,11 @@
 .content__item-text {
     font-family: "Ubuntu-Medium";
     font-size: 14px;
+    margin-left: 10px;
+}
+
+.content__item-weight {
+    font-family: "Ubuntu-Medium";
+    font-size: 14px;
+    margin-left: 10px;
 }
