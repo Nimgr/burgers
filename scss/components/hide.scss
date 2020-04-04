@@ -1,11 +1,13 @@
 .hide {
     display: none;
     background-color: #2f3234;
-    position: relative;
+    position: fixed;
     width: 100%;
     opacity: 0.9;
     min-height: 100vh;
-    z-index: 9999;
+    z-index: 9998;
+    top: 0;
+    left: 0;
 }
 
 .nav__hide {
