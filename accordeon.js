@@ -1,13 +1,14 @@
 const element = document.querySelector("#accordeon");
 
 createAccordeon(element);
+createAccordeon(document.querySelector("#accordeonVertical"));
 
 function createAccordeon(element, config) {
-  let lastActive;
+  let lastActive = element.querySelector('.active');
 
   element.classList.add("accordeon");
   element.addEventListener("click", function(e) {
-    if (e.target.classList.contains("team-accordeon__trigger")) {
+    if (e.target.classList.contains("trigger")) {
       e.preventDefault();
       if (lastActive) {
         lastActive.classList.remove("active");
@@ -28,7 +29,7 @@ function createAccordeon(element, config) {
     const titleElement = document.createElement("div");
     const contentElement = document.createElement("div");
 
-    titleElement.classList.add("team-accordeon__trigger");
+    titleElement.classList.add("trigger");
     titleElement.textContent = item.title;
     contentElement.classList.add("content");
     contentElement.innerHTML = item.content;
