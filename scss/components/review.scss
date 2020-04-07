@@ -130,3 +130,50 @@
         vertical-align: center;
     }
 }
+
+.review__view {
+    border-radius: rem(5px);
+    background-color: rgb(47, 50, 52);
+    padding: rem(8px) rem(12px);
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include ubuntu(medium);
+    font-size: rem(12px);
+    transition: .3s;
+
+    &:hover {
+        background-color: rgb(31, 33, 34);
+    }
+}
+
+.popup {
+	display: none;
+}
+
+.full-review {
+	padding: rem(25px) rem(20px);
+	position: relative;
+}
+
+.full-review__close {
+	width: rem(15px);
+	height: rem(15px);
+	display: block;
+	position: absolute;
+	right: rem(20px);
+	top: rem(20px);
+	opacity: .7;
+	transition: .3s;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}
+
