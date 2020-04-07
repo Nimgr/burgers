@@ -4,6 +4,8 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 
+$z-fixed-menu: 100;
+
 // resolutions
 
 $phones: 480px;
@@ -47,3 +49,4 @@ $desktop: 1200px;
 @import './components/map';
 @import './components/footer';
 @import './components/socials';
+@import './components/fixed-menu';

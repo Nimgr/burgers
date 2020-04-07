@@ -5,17 +5,13 @@
     padding-top: rem(13px);
 }
 
-// .logo {
-//     z-index: 9999;
-// }
-
 .header__btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.sandwich-icon {
+.hamburger-icon {
     width: 25px;
     height: 25px;
     display: none;
