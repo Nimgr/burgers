@@ -1,5 +1,5 @@
 const myForm = document.querySelector('#myForm');
-        const send = document.querySelector('#send');
+const send = document.querySelector('#send');
 
         send.addEventListener('click', event => {
             event.preventDefault();
@@ -8,7 +8,8 @@ const myForm = document.querySelector('#myForm');
                 const data = {
                     name: myForm.elements.name.value,
                     phone: myForm.elements.phone.value,
-                    email: myForm.elements.email.value
+                    email: myForm.elements.email.value,
+                    comment: myForm.elements.comment.value
                 };
 
                 const xhr = new XMLHttpRequest();
@@ -19,11 +20,19 @@ const myForm = document.querySelector('#myForm');
                 xhr.send(JSON.stringify(data));
                 xhr.addEventListener('load', () => {
                     if (xhr.response.status) {
-                        console.log('Все ок!');
+                        const result = JSON.parse(xhr.responseText);
+                        console.log(result);
                     }
                 });
             }
         });
+
+        function createResultDOM(result) {
+            const div = document.createElement('div');
+            div.classList.add('result');
+            div.textContent = "result";
+            return div;
+        }
 
         function validateForm(form) {
             let valid = true;
@@ -37,6 +46,10 @@ const myForm = document.querySelector('#myForm');
             }
 
             if (!validateField(form.elements.email)) {
+                valid = false;
+            }
+
+            if (!validateField(form.elements.comment)) {
                 valid = false;
             }
 
