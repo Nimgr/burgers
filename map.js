@@ -36,7 +36,7 @@ function initMap() {
             lat: 59.95211426420163,
             lng: 30.30039837561037
         },
-        zoom: 14,
+        zoom: 11,
         disableDefaultUI: true
         // styles: [
             // {

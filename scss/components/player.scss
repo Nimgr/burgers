@@ -1,3 +1,9 @@
+.player-section {
+    background: url(../img/player-bg.jpg) center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
 .player {
     position: relative;
     display: block;
@@ -42,7 +48,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../img/decor/splashscreen.jpg) center center / cover no-repeat;
+    background: url(../img/splashscreen.jpg) center center / cover no-repeat;
     cursor: pointer;
 }
 

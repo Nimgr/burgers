@@ -768,7 +768,7 @@
                 </ul>
             </section>
 
-            <section class="section player-section" id="section-6">
+            <section class="section player-section" id="">
                 <div class="container">
                     <h2 class="section__title section__title-video">Как мы работаем</h2>
                     <div class="player-section__container">
@@ -796,7 +796,7 @@
                 <div class="container">
                     <div class="section__title">Закажите доставку</div>
                     <div class="order__form">
-                        <form class="order__form-tag" id="myform section-7" action="/submit" method="POST"
+                        <form class="order__form-tag" id="myForm" action="/submit" method="POST"
                             enctype="multipart/form-data">
                             <div class="order__form-col">
                                 <div class="order__form-row order__form-row_double">
@@ -864,7 +864,7 @@
                                         </label>
                                     </div>
                                     <div class="order__form-row">
-                                        <input class="order__form-button" name="" type="submit" value="Заказать">
+                                        <input class="order__form-button" id="send" name="" type="submit" value="Заказать">
                                         <input class="order__form-button order__form-button_reset" name="" type="reset"
                                             value="Очистить">
                                     </div>
@@ -875,8 +875,8 @@
                 </div>
             </section>
 
-            <section class="section section__map" id="section-8">
-                <div id="map"></div>
+            <section class="section section__map" id="">
+                <div id="map">Санкт-Петербург</div>
                 <footer class="footer">
                     <div class="container footer__container">
                         <div class="footer__col">
@@ -937,6 +937,9 @@
         <li class="fixed-menu__item">
           <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
         </li>
+        <li class="fixed-menu__item">
+            <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
+          </li>
       </ul>
 
     <div class="full-review popup" id="full-review">
@@ -968,6 +971,7 @@
     <script src="overlay.js"></script>
     <script src="app.js"></script>
     <script src="accordeon.js"></script>
+    <script src="order.js"></script>
     <script src="map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD-N55uT4bDIwV7xqmwUvUvmUgohgWcBE&callback=initMap"
     async defer></script>
