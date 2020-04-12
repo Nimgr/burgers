@@ -25,7 +25,7 @@ const performTransition = (sectionEq) => {
   inScroll = true;
 
   const position = countSectionPosition(sectionEq);
-  const trasitionOver = 1000;
+  const transitionOver = 1000;
   const mouseInertionOver = 300;
 
   resetActiveClass(sections, sectionEq);
@@ -37,7 +37,7 @@ const performTransition = (sectionEq) => {
   setTimeout(() => {
     resetActiveClass($(".fixed-menu__item"), sectionEq);
     inScroll = false;
-  }, trasitionOver + mouseInertionOver);
+  }, transitionOver + mouseInertionOver);
 };
 
 const scroller = () => {

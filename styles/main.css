@@ -1534,6 +1534,19 @@ button {
   position: relative;
 }
 
+.full-review__title {
+  font-family: "Gagalin-Regular", Helvetica, sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5625rem;
+}
+
+.full-review__content {
+  font-size: 0.875rem;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 300;
+}
+
 .full-review__close {
   width: 0.9375rem;
   height: 0.9375rem;
@@ -1552,6 +1565,38 @@ button {
   height: 100%;
 }
 
+.status {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  flex-direction: column;
+  color: black;
+  width: 12.5rem;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  opacity: 1;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+#statusPopup {
+  display: none;
+}
+
+.status__btn {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: white;
+  font-family: "Ubuntu";
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+}
+
+.error-message {
+  color: #e35028;
+}
+
 .player-section {
   background: url(../img/player-bg.jpg) center center/cover no-repeat;
   display: flex;
@@ -1564,7 +1609,7 @@ button {
   width: 100%;
   height: 100%;
 }
-.player.active .player__splash {
+.player.active {
   display: none;
 }
 .player.paused .player__start {
@@ -1588,17 +1633,8 @@ button {
   left: 0;
 }
 
-.player__splash {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../img/splashscreen.jpg) center center/cover no-repeat;
-  cursor: pointer;
-}
-
 .player__controls {
+  display: flex;
   position: absolute;
   left: 0;
   right: 0;
@@ -1607,18 +1643,37 @@ button {
   background: #3e3e3e;
   justify-content: space-between;
   padding: 0 25px;
+  display: flex;
+  align-items: center;
+}
+
+.player__start {
+  width: 14px;
+  height: 22px;
+  border: none;
+  background: url("../icons/play.svg") center center/cover no-repeat;
 }
 
 .player__playback {
   height: 16px;
   width: 446px;
   position: relative;
+  background-color: #ff0000;
 }
 
 .section__title-video {
   font-size: 61px;
   color: #000;
   text-align: center;
+}
+
+.player__elem {
+  width: 100%;
+  height: 400px;
+}
+
+.player__playback-button {
+  height: 100%;
 }
 
 .order {

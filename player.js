@@ -21,7 +21,7 @@ let eventsInit = () => {
         const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
 
         $(".player__playback-button").css({
-            left: `${newButtonPositionPercent}%`
+            width: `${newButtonPositionPercent}%`
         });
 
         player.seekTo(newPlaybackPositionSec);
@@ -61,7 +61,7 @@ const onPlayerReady = () => {
         const completedPercent = (completedSec / durationSec) * 100;
 
         $(".player__playback-button").css({
-            left: `${completedPercent}%`
+            width: `${completedPercent}%`
         });
 
         $(".player__duration-completed").text(formatTime(completedSec));

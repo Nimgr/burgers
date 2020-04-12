@@ -15,7 +15,7 @@
             <source src="./video/burger_video.mp4" type="video/mp4">
         </video>
         <div class="maincontent">
-            <section class="section hero" id="section-1">
+            <section class="section hero">
                 <div class="container hero__container">
                     <header class="header">
                         <img src="./icons/logo.svg" alt="Logo" class="logo">
@@ -41,11 +41,11 @@
                                         <a href="" class="nav__link" data-scroll-to="6">Как мы работаем</a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="" class="nav__link" data-scroll-to="7">Контакты</a>
+                                        <a href="" class="nav__link" data-scroll-to="8">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
-                            <button type="button" class="btn hero__btn">Заказать</button>
+                            <a href="" class="btn hero__btn" data-scroll-to="7">Заказать</a>
                             <a href="#" class="nav__direction" id="toMainMenu"><img src="./img/hamburger.png"
                                     alt="hamburger" class="hamburger-icon">
                             </a>
@@ -60,7 +60,7 @@
                             <h3 class="section__desc">натуральные бургеры</h3>
                         </div>
                     </div>
-                    <a class="arrow arrow__down" href="#section-2"></a>
+                    <a class="arrow arrow__down" href="#" data-scroll-to="1"></a>
                 </div>
             </section>
 
@@ -95,7 +95,7 @@
                                 <a href="" class="nav__link" data-scroll-to="6">Как мы работаем</a>
                             </li>
                             <li class="nav__item-hide">
-                                <a href="" class="nav__link" data-scroll-to="6">Контакты</a>
+                                <a href="" class="nav__link" data-scroll-to="8">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -147,7 +147,7 @@
                 </div>
             </section>
 
-            <section class="section burgers" id="section-2">
+            <section class="section burgers">
                 <div class="container">
                     <div class="slider" id="slider1">
                         <a href="#" class="arrow arrow__left slider__link" data-vector="previous"></a>
@@ -481,7 +481,7 @@
                 </div>
             </section>
 
-            <section class="section team" id="section-3">
+            <section class="section team">
                 <div class="team__box">
                     <h2 class="section__title">Команда</h2>
                     <ul class="team-accordeon" id="accordeon">
@@ -545,7 +545,7 @@
                 </div>
             </section>
 
-            <section class="section menu" id="section-4">
+            <section class="section menu">
                 <div class="section__title section__title--color--white menu__title">Меню</div>
                 <ul class="menu-accordeon" id="accordeonVertical">
                     <li class="menu-accordeon__item"><a class="menu-accordeon__trigger trigger" href="#"
@@ -603,7 +603,7 @@
                 </ul>
             </section>
 
-            <section class="reviews" id="section-5">
+            <section class="reviews">
                 <ul class="reviews__list">
                     <li class="reviews__item review">
                         <div class="review__img-wrapper"
@@ -768,19 +768,18 @@
                 </ul>
             </section>
 
-            <section class="section player-section" id="">
+            <section class="section player-section">
                 <div class="container">
                     <h2 class="section__title section__title-video">Как мы работаем</h2>
                     <div class="player-section__container">
                         <div class="player">
                             <div class="player__wrapper">
                                 <div id="yt-player" class="player__elem"></div>
-                                <div class="player__splash"></div>
                             </div>
                             <div class="player__controls">
-                                <button class="player__start"></button>
+                                <div class="player__start"></div>
                                 <div class="player__playback">
-                                    <button class="player__playback-button"></button>
+                                    <div class="player__playback-button"></div>
                                 </div>
                                 <div class="player__duration">
                                     <span class="player__duration-completed">0:00</span>
@@ -870,12 +869,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="status" id="statusPopup">
+                                <a id="statusBtn" href="" class="btn status__btn">Закрыть</a>
+                            </div>
                         </form>
                     </div>
                 </div>
             </section>
 
-            <section class="section section__map" id="">
+            <section class="section section__map">
                 <div id="map">Санкт-Петербург</div>
                 <footer class="footer">
                     <div class="container footer__container">
@@ -938,8 +940,8 @@
           <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
         </li>
         <li class="fixed-menu__item">
-            <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
-          </li>
+            <a class="fixed-menu__link" href="" data-scroll-to="8"></a>
+        </li>
       </ul>
 
     <div class="full-review popup" id="full-review">

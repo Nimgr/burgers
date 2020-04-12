@@ -1,55 +1,62 @@
 const myForm = document.querySelector('#myForm');
 const send = document.querySelector('#send');
+const statusPopup = document.querySelector('#statusPopup');
+const statusBtn = document.querySelector('#statusBtn');
 
-        send.addEventListener('click', event => {
-            event.preventDefault();
+var formData = new FormData;
 
-            if (validateForm(myForm)) {
-                const data = {
-                    name: myForm.elements.name.value,
-                    phone: myForm.elements.phone.value,
-                    email: myForm.elements.email.value,
-                    comment: myForm.elements.comment.value
-                };
+    send.addEventListener('click', event => {
+        event.preventDefault();
 
-                const xhr = new XMLHttpRequest();
+        if (validateForm(myForm)) {
+            formData.append("name", myForm.elements.name.value);
+            formData.append("phone", myForm.elements.phone.value);
+            formData.append("comment", myForm.elements.comment.value);
+            formData.append("to", "nimgrin@hotmail.com");
 
-                xhr.responseType = 'json';
-                xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-                xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-                xhr.send(JSON.stringify(data));
-                xhr.addEventListener('load', () => {
-                    if (xhr.response.status) {
-                        const result = JSON.parse(xhr.responseText);
-                        console.log(result);
-                    }
-                });
-            }
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+            xhr.send(formData);
+
+            xhr.addEventListener('load', () => {
+                if (xhr.status >= 400) {
+                    const results = JSON.parse(xhr.responseText);
+                    const element = document.createElement('div');
+                    statusPopup.insertBefore(element, statusBtn);
+                    element.textContent = results.message;
+                    element.style.marginTop = '15px';
+                    statusPopup.style.display = 'block';
+
+                } else {
+                    const results = JSON.parse(xhr.responseText);
+                    const element = document.createElement('div');
+                    statusPopup.insertBefore(element, statusBtn);
+                    element.textContent = results.message;
+                    element.style.marginTop = '15px';
+                    statusPopup.style.display = 'block';
+                }
+            });
+        };
+
+        statusBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        statusPopup.style.display = "none";
         });
 
-        function createResultDOM(result) {
-            const div = document.createElement('div');
-            div.classList.add('result');
-            div.textContent = "result";
-            return div;
-        }
-
-        function validateForm(form) {
+        function validateForm(myForm) {
             let valid = true;
 
-            if (!validateField(form.elements.name)) {
+            if (!validateField(myForm.elements.name)) {
                 valid = false;
             }
 
-            if (!validateField(form.elements.phone)) {
+            if (!validateField(myForm.elements.phone)) {
                 valid = false;
             }
 
-            if (!validateField(form.elements.email)) {
-                valid = false;
-            }
-
-            if (!validateField(form.elements.comment)) {
+            if (!validateField(myForm.elements.comment)) {
                 valid = false;
             }
 
@@ -57,6 +64,14 @@ const send = document.querySelector('#send');
         }
 
         function validateField(field) {
-            field.nextElementSibling.textContent = field.validationMessage;
-            return field.checkValidity();
+            if (!field.checkValidity()) {
+                field.nextElementSibling.textContent = field.validationMessage;
+  
+                return false;
+            } else {
+                field.nextElementSibling.textContent = '';
+  
+                return true;
+            }
         }
+    });
